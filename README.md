@@ -1,2 +1,3 @@
 # my-50projects50days
-50+ mini web projects using HTML, CSS &amp; Vanilla JS
+
+> Realize and improve the demo in [50projects50days](https://github.com/bradtraversy/50projects50days) by HTML, CSS ans vanilla JS.

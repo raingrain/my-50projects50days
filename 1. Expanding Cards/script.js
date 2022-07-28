@@ -17,3 +17,4 @@ function removeClassActive () {
         panel.classList.remove('active');
     });
 }
+

@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #2c3e50;
+}
+
+.kinetic {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.kinetic::before,
+.kinetic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: #fff;
+    /* 加了延迟0.5s */
+    animation: rotate-after 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+    transform: rotate(90deg);
+    animation: rotate-before 2s linear infinite;
+}
+
+@keyframes rotate-before {
+
+    /* 角度是下面为0deg，rotate是旋转到多少度 */
+
+    0%,
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50%,
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes rotate-after {
+
+    0%,
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50%,
+    75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* @keyframes rotate-before {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(270deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes rotate-after {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
